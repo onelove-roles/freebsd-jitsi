@@ -1,0 +1,21 @@
+---
+- name: install jitsi packages
+  with_items: "{{ jitsi_packages }}"
+  package:
+    name: "{{ item.name }}"
+  notify:
+    - restart videobridge
+
+- name: enable videobridge
+  template:
+    src: jitsi_videobridge.j2
+    dest: /etc/rc.conf.d/jitsi_videobridge
+  notify:
+    - restart videobridge
+
+- name: enable jicofo
+  template:
+    src: jicofo.j2
+    dest: /etc/rc.conf.d/jicofo
+  notify:
+    - restart jicofo

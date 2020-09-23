@@ -1,0 +1,5 @@
+---
+jitsi_packages:
+  - name: jicofo
+  - name: jitsi-meet
+  - name: jitsi-videobridge

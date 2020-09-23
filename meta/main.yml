@@ -1,0 +1,12 @@
+galaxy_info:
+  author: Goran Mekić
+  description: Jitsi install automation
+  issue_tracker_url: https://github.com/onelove-roles/freebsd-jitsi/issues
+  license: BSD
+  min_ansible_version: 2.0
+  platforms:
+    - name: FreeBSD
+      versions:
+        - all
+  galaxy_tags: [freebsd]
+dependencies: []

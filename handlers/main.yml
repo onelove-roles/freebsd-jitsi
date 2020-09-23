@@ -1,0 +1,10 @@
+---
+- name: restart videobridge
+  service:
+    name: jitsi-videobridge
+    state: restarted
+
+- name: restart jicofo
+  service:
+    name: jicofo
+    state: restarted
